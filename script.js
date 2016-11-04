@@ -23,9 +23,12 @@ const RADIUS = 10
 const ROWS = 3
 const COLUMNS = Math.ceil(data.length/ROWS)
 
+const outerWidth = 400
+const outerHeight = outerWidth / 2
+
 const margin = { top: RADIUS, right: RADIUS, bottom: RADIUS, left: RADIUS }
-const width = 400 - margin.left - margin.right
-const height = width/2 - margin.top - margin.bottom
+const width = outerWidth - margin.left - margin.right
+const height = outerHeight - margin.top - margin.bottom
 
 const x = d3.scalePoint()
 	.range([0, width])
@@ -36,8 +39,7 @@ const y = d3.scalePoint()
 	.domain(d3.range(ROWS))
 
 const svg = d3.select('body').append('svg')
-		.attr('width', width + margin.left + margin.right)
-		.attr('height', height + margin.top + margin.bottom)
+		.attr('viewBox', `0 0 ${outerWidth} ${outerHeight}`)
 	.append('g')
 		.attr('transform', `translate(${margin.left}, ${margin.top})`)
 
