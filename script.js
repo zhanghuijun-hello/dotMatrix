@@ -38,7 +38,7 @@ const y = d3.scalePoint()
 	.range([height, 0])
 	.domain(d3.range(ROWS))
 
-const svg = d3.select('body').append('svg')
+const svg = d3.select('svg')
 		.attr('viewBox', `0 0 ${outerWidth} ${outerHeight}`)
 	.append('g')
 		.attr('transform', `translate(${margin.left}, ${margin.top})`)
@@ -50,4 +50,3 @@ const circle = svg.selectAll('circle')
 		.attr('cx', (d, i) => x(i % COLUMNS))
 		.attr('cy', (d, i) => y(Math.floor(i / COLUMNS)))
 		.attr('class', d => d.party)
-

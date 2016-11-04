@@ -1,1 +1,1 @@
-svg{display:block;border:1px solid red}svg circle.dem{fill:#00f}svg circle.gop{fill:red}svg circle.ind{fill:green}svg circle.none{fill:grey}
+.container{margin:1em;padding:0 1em 2em;position:relative}svg{display:block}svg circle.dem{fill:#00f}svg circle.gop{fill:red}svg circle.ind{fill:green}svg circle.none{fill:grey}.plumbline{border-left:dashed grey 1px;position:absolute;top:0;left:50%;height:100%}
