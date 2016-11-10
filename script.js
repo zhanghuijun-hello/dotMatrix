@@ -40,6 +40,7 @@ const y = d3.scalePoint()
 
 const svg = d3.select('svg')
 		.attr('viewBox', `0 0 ${outerWidth} ${outerHeight}`)
+		.attr('preserveAspectRatio', 'xMidYMin slice')
 	.append('g')
 		.attr('transform', `translate(${margin.left}, ${margin.top})`)
 
