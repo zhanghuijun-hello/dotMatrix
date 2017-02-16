@@ -1,1 +1,1 @@
-Histogram of a normal distribution
+Dot matrix
